@@ -36,7 +36,7 @@ public class AuthController {
         return ResponseEntity.ok("vaof dc");
     }
     @PostMapping("/sign-in")
-    public ResponseEntity<JwtResponse> signin(@RequestBody LoginRequest formSignInDto){
+    public ResponseEntity<JwtResponse> signin(@RequestBody LoginRequest formSignInDto) {
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(formSignInDto.getUsername(),formSignInDto.getPassword())
         ); // tạo đối tương authentiction để xác thực thông qua username va password
